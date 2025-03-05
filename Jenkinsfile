@@ -39,7 +39,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh '''
-                   cd $WORKSPACE/Pratical-Example/java-maven-app
+                   cd $WORKSPACE
                    docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_TAG} .
                 '''
                   }
