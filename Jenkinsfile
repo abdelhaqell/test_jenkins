@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                   cd $WORKSPACE/Pratical-Example/java-maven-app
+                   cd $WORKSPACE
                    pwd
                    ls 
                    mvn clean install
@@ -30,7 +30,7 @@ pipeline {
         stage('Generate Artifact') {
             steps {
                 sh '''
-                   cd $WORKSPACE/Pratical-Example/java-maven-app
+                   cd $WORKSPACE
                    mvn package
                 '''
             }
