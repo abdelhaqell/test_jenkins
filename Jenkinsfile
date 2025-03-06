@@ -14,6 +14,8 @@ pipeline {
         DOCKER_IMAGE_NAME = 'java-mvn-app' 
     }
 
+
+
     stages {    
 
         stage('Build') {
