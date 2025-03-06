@@ -18,12 +18,15 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                script {
-                    // Appel de la fonction getcheckoutgroovy
-                    getcheckoutgroovy('https://github.com/abdelhaqell/test_jenkins.git', 'main')
-                }
+                
+                    getcheckoutgroovy(
+                        branch: 'main',
+                        url:'https://github.com/abdelhaqell/test_jenkins.git'
+                        )
+                
             }
         }
+    }
 
 
 
